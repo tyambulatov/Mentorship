@@ -1,6 +1,7 @@
 -- create database settlements;
 drop table if exists house_tenant;
 drop table if exists tenant;
+drop view if exists houses;
 drop table if exists house;
 drop table if exists street;
 drop table if exists settlement;
