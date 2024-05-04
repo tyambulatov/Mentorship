@@ -16,10 +16,12 @@ public class SimpleServer extends Thread {
 
     public void run() {
         while (true) {
-            try (Socket socket = serverSocket.accept()) {
-                System.out.println("Just connected to " + socket.getRemoteSocketAddress());
+            try {
+                Socket socket = serverSocket.accept();
+                System.out.println("Server: start");
                 processInput(socket);
-                System.out.println("Request handling finished successfully");
+                System.out.println("Server: finish");
+                socket.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

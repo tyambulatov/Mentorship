@@ -10,4 +10,4 @@ curl -X POST -H 'Content-Type: text' -d 'Hello World! from post request' http://
 
 curl -X POST -H 'Content-Type: html' -d '<html><body><h1>Hello from Habrahabr</h1></body></html>' http://localhost:8080/
 
-curl -X DELETE -H "Content-Type: application/json" -d '{"name":"mkyong","email":"abc@gmail.com"}' http://localhost:8080/users/100
+curl -X DELETE http://localhost:8080/users/100
