@@ -33,6 +33,8 @@ public class ResponseProcessor {
         bufferedWriter.write("Content-Type: " + httpRequest.getParameters().get("Content-Type") + "\r\n\r\n");
         bufferedWriter.write(httpRequest.getBody() + "\r\n");
         bufferedWriter.close();
+//        Content-Type - в каком формате тело запроса/ответа - req/res
+//        Accept - для req - в каком формате он ожидает res
     }
 
     public void deleteResponse() throws IOException {

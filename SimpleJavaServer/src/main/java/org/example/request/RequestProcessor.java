@@ -24,6 +24,15 @@ public class RequestProcessor {
             case POST -> postRequest();
             case DELETE -> deleteRequest();
         }
+
+        // path
+        // /users - GET all users
+        // /users/123 - GET user id=123
+
+        // /users -> GET / POST
+
+        // GET
+        // /users, /products, /transactions
     }
 
     private void getRequest() throws IOException {
@@ -41,6 +50,12 @@ public class RequestProcessor {
         checkBodyIsNotEmpty();
         responseProcessor.postResponse();
     }
+
+//    GET domain.com/my-api/users -> список юзеров
+//    POST domain.com/my-api/users + body -> создать нового
+//    GET domain.com/my-api/users/{userID} -> получить юзера
+//    POST domain.com/my-api/users/{userId}/block + no body -> заблокировать юзера
+
 
     private void deleteRequest() throws IOException {
         checkBodyIsEmpty();
